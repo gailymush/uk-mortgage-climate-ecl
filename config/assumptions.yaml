@@ -1,0 +1,20 @@
+project:
+  seed: 42
+  reporting_date: "2025-12-31"
+  n_loans: 15000
+
+pd_model:
+  train_end: "2019-12-31"   # out-of-time split
+
+staging:
+  sicr_multiplier: 2.0      # source: illustrative; stressed in Part 5
+  sicr_abs_floor: 0.005
+
+lgd:
+  forced_sale_discount: null  # fill in Part 3 with a source
+  sale_costs: null
+  cure_rate: null
+  floor: 0.01
+
+scenarios:
+  weights: {base: 0.5, upside: 0.2, downside: 0.3}
